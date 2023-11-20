@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "280",
+                        "endColumns": "55",
+                        "endOffsets": "331"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "280",
+                        "endColumns": "55",
+                        "endOffsets": "331"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

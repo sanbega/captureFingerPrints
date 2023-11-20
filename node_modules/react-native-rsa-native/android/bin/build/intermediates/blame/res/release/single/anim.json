@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_fade_out.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_slide_in_top.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_popup_exit.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_fade_in.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/catalyst_push_up_in.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/react-native-0.20.1.aar/609945e9bc62722508efe5b39d7db7ce/res/anim/catalyst_push_up_in.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_slide_out_top.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/abc_popup_enter.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f368d68d0a5cab4f8120d0aab164d6e7/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Volumes/code/projects/react-native-rsa-native/android/build/intermediates/res/merged/release/anim/catalyst_push_up_out.xml",
+        "source": "/Users/amitay/.gradle/caches/transforms-1/files-1.1/react-native-0.20.1.aar/609945e9bc62722508efe5b39d7db7ce/res/anim/catalyst_push_up_out.xml"
+    }
+]

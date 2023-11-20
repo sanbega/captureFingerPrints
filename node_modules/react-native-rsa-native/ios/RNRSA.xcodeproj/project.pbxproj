@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A055BADE23D5D02A00E2A830 /* RNRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A055BADD23D5D02A00E2A830 /* RNRSA.m */; };
+		A055BAE123D5D04D00E2A830 /* RNRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE023D5D04D00E2A830 /* RNRSA.swift */; };
+		A055BAE323D5D08700E2A830 /* RNRSAKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE223D5D08700E2A830 /* RNRSAKeychain.m */; };
+		A055BAE523D5D09F00E2A830 /* RNRSAKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE423D5D09F00E2A830 /* RNRSAKeychain.swift */; };
+		A055BAE723D5D0BC00E2A830 /* RSAECFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */; };
+		A055BAE923D5D0EF00E2A830 /* RSAECNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */; };
+		A055BAEB23D5D10C00E2A830 /* RSAKeyEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */; };
+		A055BAED23D5D12800E2A830 /* CSRSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEC23D5D12800E2A830 /* CSRSwift.swift */; };
+		A055BAEF23D5D14000E2A830 /* CSRSwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF40FFBB1F05EC4000DC4E95 /* Copy Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Copy Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A055BADD23D5D02A00E2A830 /* RNRSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNRSA.m; sourceTree = "<group>"; };
+		A055BADF23D5D04C00E2A830 /* RNRSA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNRSA-Bridging-Header.h"; sourceTree = "<group>"; };
+		A055BAE023D5D04D00E2A830 /* RNRSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNRSA.swift; sourceTree = "<group>"; };
+		A055BAE223D5D08700E2A830 /* RNRSAKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNRSAKeychain.m; sourceTree = "<group>"; };
+		A055BAE423D5D09F00E2A830 /* RNRSAKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNRSAKeychain.swift; sourceTree = "<group>"; };
+		A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAECFormatter.swift; sourceTree = "<group>"; };
+		A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAECNative.swift; sourceTree = "<group>"; };
+		A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyEncoding.swift; sourceTree = "<group>"; };
+		A055BAEC23D5D12800E2A830 /* CSRSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRSwift.swift; sourceTree = "<group>"; };
+		A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRSwiftConstants.swift; sourceTree = "<group>"; };
+		BF40FFBD1F05EC4000DC4E95 /* libRNRSA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNRSA.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF40FFBA1F05EC4000DC4E95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF40FFB41F05EC4000DC4E95 = {
+			isa = PBXGroup;
+			children = (
+				A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */,
+				A055BAEC23D5D12800E2A830 /* CSRSwift.swift */,
+				A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */,
+				A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */,
+				A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */,
+				A055BAE423D5D09F00E2A830 /* RNRSAKeychain.swift */,
+				A055BAE223D5D08700E2A830 /* RNRSAKeychain.m */,
+				A055BAE023D5D04D00E2A830 /* RNRSA.swift */,
+				A055BADD23D5D02A00E2A830 /* RNRSA.m */,
+				BF40FFBE1F05EC4000DC4E95 /* Products */,
+				A055BADF23D5D04C00E2A830 /* RNRSA-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		BF40FFBE1F05EC4000DC4E95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF40FFBD1F05EC4000DC4E95 /* libRNRSA.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF40FFBC1F05EC4000DC4E95 /* RNRSA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF40FFC61F05EC4000DC4E95 /* Build configuration list for PBXNativeTarget "RNRSA" */;
+			buildPhases = (
+				BF40FFB91F05EC4000DC4E95 /* Sources */,
+				BF40FFBA1F05EC4000DC4E95 /* Frameworks */,
+				BF40FFBB1F05EC4000DC4E95 /* Copy Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNRSA;
+			productName = RNRSA;
+			productReference = BF40FFBD1F05EC4000DC4E95 /* libRNRSA.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF40FFB51F05EC4000DC4E95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = RNRSA;
+				TargetAttributes = {
+					BF40FFBC1F05EC4000DC4E95 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = BF40FFB81F05EC4000DC4E95 /* Build configuration list for PBXProject "RNRSA" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF40FFB41F05EC4000DC4E95;
+			productRefGroup = BF40FFBE1F05EC4000DC4E95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF40FFBC1F05EC4000DC4E95 /* RNRSA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF40FFB91F05EC4000DC4E95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A055BAE723D5D0BC00E2A830 /* RSAECFormatter.swift in Sources */,
+				A055BAE923D5D0EF00E2A830 /* RSAECNative.swift in Sources */,
+				A055BAEB23D5D10C00E2A830 /* RSAKeyEncoding.swift in Sources */,
+				A055BAE523D5D09F00E2A830 /* RNRSAKeychain.swift in Sources */,
+				A055BAE123D5D04D00E2A830 /* RNRSA.swift in Sources */,
+				A055BAE323D5D08700E2A830 /* RNRSAKeychain.m in Sources */,
+				A055BAED23D5D12800E2A830 /* CSRSwift.swift in Sources */,
+				A055BADE23D5D02A00E2A830 /* RNRSA.m in Sources */,
+				A055BAEF23D5D14000E2A830 /* CSRSwiftConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF40FFC41F05EC4000DC4E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF40FFC51F05EC4000DC4E95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF40FFC71F05EC4000DC4E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNRSA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF40FFC81F05EC4000DC4E95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNRSA-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF40FFB81F05EC4000DC4E95 /* Build configuration list for PBXProject "RNRSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF40FFC41F05EC4000DC4E95 /* Debug */,
+				BF40FFC51F05EC4000DC4E95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF40FFC61F05EC4000DC4E95 /* Build configuration list for PBXNativeTarget "RNRSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF40FFC71F05EC4000DC4E95 /* Debug */,
+				BF40FFC81F05EC4000DC4E95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF40FFB51F05EC4000DC4E95 /* Project object */;
+}

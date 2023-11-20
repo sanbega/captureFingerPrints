@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.3.2">
+
+    <issue
+        id="InlinedApi"
+        severity="Warning"
+        message="Field requires API level 23 (current min is 16): `android.security.keystore.KeyProperties#KEY_ALGORITHM_RSA`"
+        category="Correctness"
+        priority="6"
+        summary="Using inlined constants on older versions"
+        explanation="This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that&apos;s fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and decide whether it&apos;s safe and can be suppressed or whether the code needs to be guarded.&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level."
+        errorLine1="    public static final String ALGORITHM = KeyProperties.KEY_ALGORITHM_RSA;"
+        errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="67"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="InvalidPackage"
+        severity="Warning"
+        message="Invalid package reference in library; not included in Android: `javax.naming.directory`. Referenced from `org.spongycastle.cert.dane.fetcher.JndiDANEFetcherFactory`."
+        category="Correctness"
+        priority="6"
+        summary="Package not included in Android"
+        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
+        <location
+            file="/Users/amitay/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/bcpkix-jdk15on/1.56.0.0/434734c3c66d400d5bd4383724ccb71ada61482c/bcpkix-jdk15on-1.56.0.0.jar"/>
+    </issue>
+
+    <issue
+        id="InvalidPackage"
+        severity="Warning"
+        message="Invalid package reference in library; not included in Android: `javax.naming`. Referenced from `org.spongycastle.cert.dane.fetcher.JndiDANEFetcherFactory.1`."
+        category="Correctness"
+        priority="6"
+        summary="Package not included in Android"
+        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
+        <location
+            file="/Users/amitay/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/bcpkix-jdk15on/1.56.0.0/434734c3c66d400d5bd4383724ccb71ada61482c/bcpkix-jdk15on-1.56.0.0.jar"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): new android.security.KeyPairGeneratorSpec.Builder"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="            KeyPairGeneratorSpec.Builder keyPairGeneratorSpec = new KeyPairGeneratorSpec.Builder(context)"
+        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="314"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#setAlias"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                .setAlias(keyTag)"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="315"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#setSubject"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                .setSubject(new X500Principal("
+        errorLine2="                 ~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="316"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#setSerialNumber"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                .setSerialNumber(BigInteger.ONE)"
+        errorLine2="                 ~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="319"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#setStartDate"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                .setStartDate(Calendar.getInstance().getTime())"
+        errorLine2="                 ~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="320"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#setEndDate"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                .setEndDate(endDate.getTime());"
+        errorLine2="                 ~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="321"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 18 (current min is 16): android.security.KeyPairGeneratorSpec.Builder#build"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="            kpg.initialize(keyPairGeneratorSpec.build());"
+        errorLine2="                                                ~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="325"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Cast from `KeyPairGeneratorSpec` to `AlgorithmParameterSpec` requires API level 18 (current min is 16)"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="            kpg.initialize(keyPairGeneratorSpec.build());"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="325"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 26"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/build.gradle"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.tools.build:gradle than 3.3.2 is available: 3.4.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="        classpath &apos;com.android.tools.build:gradle:3.3.2&apos;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/build.gradle"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDynamicVersion"
+        severity="Warning"
+        message="Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.facebook.react:react-native:+)"
+        category="Correctness"
+        priority="4"
+        summary="Gradle Dynamic Version"
+        explanation="Using `+` in dependencies lets you automatically pick up the latest available version rather than a specific, named version. However, this is not recommended; your builds are not repeatable; you may have tested with a slightly different version than what the build server used. (Using a dynamic version as the major version number is more problematic than using it in the minor version position.)"
+        errorLine1="    implementation &apos;com.facebook.react:react-native:+&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/build.gradle"
+            line="58"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="TrulyRandom"
+        severity="Warning"
+        message="Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info."
+        category="Security"
+        priority="9"
+        summary="Weak RNG"
+        explanation="Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.&#xA;&#xA;If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .&#xA;&#xA;This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue."
+        url="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        urls="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        errorLine1="        KeyPairGenerator kpg = KeyPairGenerator.getInstance(ALGORITHM);"
+        errorLine2="                                                ~~~~~~~~~~~">
+        <location
+            file="/Volumes/code/projects/react-native-rsa-native/android/src/main/java/com/RNRSA/RSA.java"
+            line="284"
+            column="49"/>
+    </issue>
+
+</issues>
