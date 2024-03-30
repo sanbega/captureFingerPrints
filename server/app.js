@@ -22,6 +22,6 @@ app.get("/", function (req, res) {
   res.send("Welcome to the project");
 });
 
-app.listen(4000, () => {
-  console.log("Server running on http://localhost:4000");
+app.listen(8080, () => {
+  console.log("Server running on http://localhost:8080");
 });

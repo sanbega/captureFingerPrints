@@ -7,7 +7,6 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 // //
 const myImage = require("../../assets/acess2.png");
 
-
 // //esto es nuevo
 // //nota esta es la funcion askForBiometrics esta funcion sera la encargada de iniciar la autenticacion biometrica y devolvera el resultado de la autenticacion
 // const askForBiometrics = async () =>
@@ -17,7 +16,7 @@ const myImage = require("../../assets/acess2.png");
 //         cancelLabel: "Not now",
 //     });
 // //
-// //esto es nuevo 
+// //esto es nuevo
 // import {
 //     authenticateAsync
 // } from 'expo-local-authentication';
@@ -48,23 +47,23 @@ const myImage = require("../../assets/acess2.png");
 
 // //
 
-export default function PaymentScreen({setIsAuthenticated}) {
-return (
-  <View>
-    <Image source={myImage} style={style.image}></Image>
-    <Text style={style.title}></Text>
-    <Text style={style.description}>Huella capturada correctamente.</Text>
-    <TouchableOpacity
+export default function PaymentScreen({ setIsAuthenticated }) {
+  return (
+    <View>
+      <Image source={myImage} style={style.image}></Image>
+      <Text style={style.title}></Text>
+      <Text style={style.description}>Huella capturada correctamente.</Text>
+      <TouchableOpacity
         onPress={() => setIsAuthenticated(false)}
         style={style.btn}
-    >
-      <Text style={style.text}>Aceptar</Text>
-    </TouchableOpacity>
-  </View>
-);
+      >
+        <Text style={style.text}>Aceptar</Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
 const style = StyleSheet.create({
-btn: {
+  btn: {
     width: 200,
     alignItems: "center",
     justifyContent: "center",
@@ -72,27 +71,27 @@ btn: {
     backgroundColor: "#8893FC",
     padding: 10,
     borderRadius: 5,
-},
-image: {
+  },
+  image: {
     width: 489,
     height: 461,
-},
-text: {
+  },
+  text: {
     color: "#fff",
     fontSize: 20,
     fontWeight: "500",
-},
-title: {
+  },
+  title: {
     fontSize: 50,
     fontWeight: "400",
     marginVertical: 30,
     textAlign: "center",
-},
-description: {
+  },
+  description: {
     fontSize: 18,
     color: "gray",
     textAlign: "center",
     marginHorizontal: 20,
     marginBottom: 50,
-},
+  },
 });

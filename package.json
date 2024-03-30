@@ -9,8 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@rneui/themed": "^4.0.0-rc.8",
     "axios": "^1.4.0",
     "expo": "~49.0.5",
+    "expo-linear-gradient": "^12.7.2",
     "expo-local-authentication": "~13.4.1",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
